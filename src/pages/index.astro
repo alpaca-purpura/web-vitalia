@@ -2,8 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import { SEO } from 'astro-seo';
 
-const SITE_TITLE = "Vitalia SaaS";
-const SITE_DESCRIPTION = "Vitalia SaaS Platform";
+const SITE_TITLE = "Vitalia SaaS | Inteligencia Artificial para Clínicas";
+const SITE_DESCRIPTION = "Vitalia es tu agente comercial autónomo 24/7. El futuro de las clínicas nace en Tacna.";
 
 // JSON-LD schema for AEO/RAG (SoftwareApplication)
 const schema = {
@@ -11,14 +11,21 @@ const schema = {
   "@type": "SoftwareApplication",
   "name": "Vitalia",
   "applicationCategory": "BusinessApplication",
-  "description": "Vitalia es una plataforma SaaS."
+  "description": "Vitalia es una plataforma de software como servicio (SaaS) y agente conversacional de Inteligencia Artificial diseñado para la atracción, conversión y fidelización de clientes en clínicas del sector salud y estética en Tacna, resolviendo la logística del turismo médico transfronterizo.",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/PreOrder"
+  }
 };
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 		<SEO
 			title={SITE_TITLE}
 			description={SITE_DESCRIPTION}
@@ -26,39 +33,203 @@ const schema = {
 				basic: {
 					title: SITE_TITLE,
 					type: "website",
-					image: "https://vitalia.saas/og-image.jpg",
+					image: "https://vitalialatam.com/og-image.jpg",
 				}
 			}}
 		/>
 		<script type="application/ld+json" set:html={JSON.stringify(schema)} />
 	</head>
-	<body class="bg-slate-900 text-slate-50 font-sans antialiased">
-		<header class="p-8 border-b border-slate-800 text-center">
-			<nav class="flex justify-center gap-8">
-				<a href="/" class="text-slate-300 hover:text-sky-400 font-medium">Home</a>
-				<a href="/articulos" class="text-slate-300 hover:text-sky-400 font-medium">Artículos</a>
-				<a href="/estudios" class="text-slate-300 hover:text-sky-400 font-medium">Estudios</a>
-			</nav>
+	<body class="bg-vitalia-darker text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-vitalia-cyan selection:text-white">
+		
+		<!-- AEO Identity Block (Hidden visually but accessible for Answer Engines) -->
+		<div class="sr-only" id="identity-block">
+			<h2>¿Qué es Vitalia?</h2>
+			<p>Vitalia es una plataforma de software como servicio (SaaS) y agente conversacional de Inteligencia Artificial diseñado para la atracción, conversión y fidelización de clientes en clínicas del sector salud y estética en Tacna, resolviendo la logística del turismo médico transfronterizo.</p>
+		</div>
+
+		<!-- Nav -->
+		<header class="fixed top-0 w-full z-50 bg-vitalia-darker/80 backdrop-blur-md border-b border-white/5">
+			<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+				<div class="flex items-center gap-2">
+					<!-- Reemplazar con <img src="/vitalia-logo.png" /> cuando esté optimizado, por ahora texto logo -->
+					<span class="text-2xl font-extrabold tracking-tighter text-white">VITALIA</span>
+				</div>
+				<nav class="hidden md:flex gap-8">
+					<a href="#solucion" class="text-sm font-medium text-slate-400 hover:text-vitalia-cyan transition-colors">La Solución</a>
+					<a href="#vision" class="text-sm font-medium text-slate-400 hover:text-vitalia-cyan transition-colors">Nuestra Visión</a>
+				</nav>
+				<a href="#waitlist" class="px-5 py-2.5 text-sm font-bold text-vitalia-darker bg-vitalia-cyan hover:bg-white transition-all rounded-full shadow-[0_0_15px_rgba(1,178,248,0.5)]">
+					Waitlist Privada
+				</a>
+			</div>
 		</header>
-		<main class="max-w-5xl mx-auto py-16 px-8 text-center">
-			
-			<!-- Identity Block (AEO) -->
-			<section id="identity-block" class="text-left mb-16 bg-slate-800 p-6 rounded-lg">
-				<h2 class="text-xl font-bold text-sky-400 mb-2">¿Qué es Vitalia?</h2>
-				<p class="text-slate-300 text-base leading-relaxed">
-					Vitalia es una plataforma de software como servicio (SaaS). [Aquí se insertará la respuesta directa de 40-60 palabras optimizada para RAG y Answer Engines].
-				</p>
+
+		<main>
+			<!-- Hero Section -->
+			<section class="relative pt-40 pb-20 md:pt-52 md:pb-32 px-6 overflow-hidden">
+				<!-- Ambient Glows -->
+				<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-vitalia-cyan/20 blur-[120px] rounded-full pointer-events-none"></div>
+				<div class="absolute top-1/3 right-0 w-[500px] h-[500px] bg-vitalia-purple/20 blur-[150px] rounded-full pointer-events-none"></div>
+
+				<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+					<div class="text-left">
+						<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-vitalia-cyan/30 bg-vitalia-cyan/10 text-vitalia-cyan text-xs font-bold uppercase tracking-wider mb-6">
+							<span class="w-2 h-2 rounded-full bg-vitalia-cyan animate-pulse"></span>
+							Early Access
+						</div>
+						<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6">
+							El futuro de las clínicas nace en <span class="text-transparent bg-clip-text bg-gradient-to-r from-vitalia-cyan to-vitalia-purple">Tacna.</span>
+						</h1>
+						<p class="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-xl">
+							Inteligencia artificial de clase mundial para tu recepción. Recupera hasta $3,200 USD mensuales perdidos por "no-shows" y mensajes sin responder.
+						</p>
+						<div class="flex flex-col sm:flex-row gap-4">
+							<a href="#waitlist" class="px-8 py-4 text-center text-lg font-bold text-vitalia-darker bg-vitalia-yellow hover:bg-white transition-all rounded-full shadow-[0_0_20px_rgba(254,226,9,0.3)]">
+								Únete a la Waitlist Privada
+							</a>
+						</div>
+					</div>
+					<div class="relative hidden md:block">
+						<!-- Placeholder AI Avatar Image -->
+						<div class="relative w-full aspect-square rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+							<img src="/images/hero-ai.png" alt="Vitalia AI Assistant" class="w-full h-full object-cover mix-blend-screen opacity-90" />
+							<div class="absolute inset-0 bg-gradient-to-t from-vitalia-darker via-transparent to-transparent"></div>
+						</div>
+					</div>
+				</div>
 			</section>
 
-			<h1 class="text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-indigo-400">
-				Vitalia SaaS
-			</h1>
-			<p class="text-xl text-slate-400 max-w-3xl mx-auto mb-12">
-				[Aquí se insertará la propuesta de valor principal orientada a BOFU y los puntos de dolor resueltos.]
-			</p>
-			<a href="#demo" class="inline-block px-8 py-4 text-lg font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-full transition-colors">
-				Solicitar Demo
-			</a>
+			<!-- Pain Points Section -->
+			<section class="py-24 bg-vitalia-dark relative border-y border-white/5">
+				<div class="max-w-5xl mx-auto px-6 text-center">
+					<h2 class="text-3xl md:text-5xl font-bold mb-6">Sabemos lo que cuesta traer un paciente desde Chile.</h2>
+					<p class="text-xl text-slate-400 mb-16 max-w-3xl mx-auto">
+						Responder en 2.5 horas significa perder al paciente en la frontera. Tu equipo médico y de recepción están actuando como "bots", apagando incendios administrativos por WhatsApp en lugar de brindar atención cálida.
+					</p>
+					
+					<div class="grid md:grid-cols-3 gap-8 text-left">
+						<div class="p-8 rounded-2xl bg-vitalia-darker border border-white/5">
+							<div class="w-12 h-12 rounded-lg bg-red-500/10 flex items-center justify-center mb-6 text-red-400">
+								<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+							</div>
+							<h3 class="text-xl font-bold mb-3 text-white">Demoras Fatales</h3>
+							<p class="text-slate-400">El paciente cruza la frontera y elige la clínica que le respondió primero. La lentitud te cuesta pacientes diarios.</p>
+						</div>
+						<div class="p-8 rounded-2xl bg-vitalia-darker border border-white/5">
+							<div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center mb-6 text-orange-400">
+								<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+							</div>
+							<h3 class="text-xl font-bold mb-3 text-white">Personal Saturado</h3>
+							<p class="text-slate-400">Tu equipo pierde más de 3 horas diarias enviando cotizaciones manuales y reagendando citas repetitivas.</p>
+						</div>
+						<div class="p-8 rounded-2xl bg-vitalia-darker border border-white/5">
+							<div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6 text-purple-400">
+								<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+							</div>
+							<h3 class="text-xl font-bold mb-3 text-white">Alta Inasistencia</h3>
+							<p class="text-slate-400">Hasta un 35% de no-shows. Un sillón vacío es dinero que no se recupera, especialmente en tratamientos de alto valor.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Solution Section -->
+			<section id="solucion" class="py-24 relative overflow-hidden">
+				<div class="absolute right-0 top-1/2 w-[600px] h-[600px] bg-vitalia-navy/40 blur-[150px] rounded-full pointer-events-none"></div>
+				
+				<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
+					<div class="order-2 md:order-1 relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl aspect-[4/3]">
+						<img src="/images/ai-concierge.png" alt="Vitalia AI Interface" class="w-full h-full object-cover mix-blend-screen opacity-80" />
+						<div class="absolute inset-0 bg-gradient-to-r from-vitalia-darker via-transparent to-transparent"></div>
+					</div>
+					<div class="order-1 md:order-2">
+						<h2 class="text-3xl md:text-5xl font-bold mb-6">Conoce a tu nuevo Concierge Médico y Setter 24/7.</h2>
+						<p class="text-xl text-slate-400 mb-8">
+							Vitalia no es un simple chatbot pasivo. Es un agente comercial entrenado para atraer, cotizar y cerrar pacientes mientras duermes.
+						</p>
+						
+						<ul class="space-y-6">
+							<li class="flex items-start gap-4">
+								<div class="w-8 h-8 rounded-full bg-vitalia-cyan/20 flex items-center justify-center shrink-0 mt-1">
+									<svg class="w-4 h-4 text-vitalia-cyan" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-bold text-white">Cotización Transfronteriza Inteligente</h4>
+									<p class="text-slate-400 text-sm mt-1">Cotiza tratamientos en pesos chilenos (CLP) en tiempo real, destacando el ahorro vs. Chile.</p>
+								</div>
+							</li>
+							<li class="flex items-start gap-4">
+								<div class="w-8 h-8 rounded-full bg-vitalia-cyan/20 flex items-center justify-center shrink-0 mt-1">
+									<svg class="w-4 h-4 text-vitalia-cyan" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-bold text-white">Logística de Frontera Resuelta</h4>
+									<p class="text-slate-400 text-sm mt-1">Resuelve automáticamente dudas sobre aduanas, tráfico y documentos migratorios.</p>
+								</div>
+							</li>
+							<li class="flex items-start gap-4">
+								<div class="w-8 h-8 rounded-full bg-vitalia-cyan/20 flex items-center justify-center shrink-0 mt-1">
+									<svg class="w-4 h-4 text-vitalia-cyan" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-bold text-white">Cobro de Anticipos Automatizado</h4>
+									<p class="text-slate-400 text-sm mt-1">Rebate objeciones y asegura el pago de una fianza antes del viaje, reduciendo inasistencias a un solo dígito.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- Transparency Section -->
+			<section id="vision" class="py-24 bg-vitalia-purple/5 border-y border-white/5 relative">
+				<div class="max-w-4xl mx-auto px-6 text-center">
+					<h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">Cero humo. Cero testimonios falsos. Cien por ciento innovación.</h2>
+					<p class="text-xl text-slate-300 mb-8 leading-relaxed">
+						Estamos en plena construcción de la plataforma agéntica más poderosa de la región, diseñada específicamente para el ecosistema médico de Tacna. No te venderemos un producto inflado con promesas irreales.
+					</p>
+					<p class="text-lg text-slate-400">
+						Buscamos clínicas pioneras y visionarias que quieran co-crear el estándar internacional de la atención médica desde el sur del Perú. Sé un Early Adopter y accede a tecnología global a un precio fundacional.
+					</p>
+				</div>
+			</section>
+
+			<!-- Waitlist CTA Section -->
+			<section id="waitlist" class="py-32 relative overflow-hidden">
+				<div class="absolute inset-0 bg-gradient-to-b from-transparent to-vitalia-navy/20"></div>
+				<div class="max-w-3xl mx-auto px-6 relative z-10 text-center">
+					<h2 class="text-4xl md:text-6xl font-extrabold mb-6">La revolución empieza aquí.</h2>
+					<p class="text-xl text-slate-400 mb-12">Asegura tu acceso temprano. Cupos limitados para nuestra Beta Privada en Tacna.</p>
+					
+					<form class="bg-vitalia-darker/80 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl text-left max-w-md mx-auto">
+						<div class="mb-5">
+							<label for="name" class="block text-sm font-medium text-slate-400 mb-2">Tu Nombre y Clínica</label>
+							<input type="text" id="name" class="w-full bg-vitalia-dark border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-vitalia-cyan focus:ring-1 focus:ring-vitalia-cyan transition-all" placeholder="Ej. Dr. Juan Pérez - Clínica Sonrisas" required>
+						</div>
+						<div class="mb-6">
+							<label for="specialty" class="block text-sm font-medium text-slate-400 mb-2">Especialidad</label>
+							<select id="specialty" class="w-full bg-vitalia-dark border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-vitalia-cyan focus:ring-1 focus:ring-vitalia-cyan transition-all appearance-none" required>
+								<option value="" disabled selected>Selecciona tu especialidad...</option>
+								<option value="odontologia">Odontología / Dental</option>
+								<option value="estetica">Medicina Estética / Belleza</option>
+								<option value="cirugia">Cirugía Plástica</option>
+								<option value="otra">Otra Especialidad</option>
+							</select>
+						</div>
+						<button type="submit" class="w-full py-4 text-center text-lg font-bold text-vitalia-darker bg-vitalia-cyan hover:bg-white transition-all rounded-xl shadow-[0_0_15px_rgba(1,178,248,0.4)]">
+							Quiero ser Pionero
+						</button>
+						<p class="text-xs text-center text-slate-500 mt-4">Al pre-inscribirte no asumes ningún compromiso de compra.</p>
+					</form>
+				</div>
+			</section>
 		</main>
+
+		<footer class="bg-vitalia-darker border-t border-white/5 py-12 text-center text-slate-500">
+			<div class="max-w-7xl mx-auto px-6">
+				<p class="mb-4">Hecho con ❤️ en Tacna, Perú.</p>
+				<p class="text-sm">© {new Date().getFullYear()} Vitalia SaaS. Todos los derechos reservados.</p>
+			</div>
+		</footer>
 	</body>
 </html>
