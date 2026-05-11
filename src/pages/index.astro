@@ -49,48 +49,49 @@ const schema = {
 
 		<!-- Nav -->
 		<header class="fixed top-6 w-full z-50 px-6 flex justify-center pointer-events-none">
-			<div class="pointer-events-auto bg-white/90 backdrop-blur-md border border-slate-200 shadow-sm rounded-full px-6 py-3 flex items-center justify-between w-full max-w-5xl">
+			<div class="pointer-events-auto bg-white/90 backdrop-blur-md border border-slate-200 shadow-sm rounded-full px-6 py-3 flex items-center justify-between w-full max-w-6xl">
 				<div class="flex items-center gap-2">
-					<span class="text-xl font-extrabold tracking-tighter text-vitalia-navy">VITALIA</span>
+					<img src="/images/vitalia-logo.png" alt="Vitalia Logo" class="h-8" />
 				</div>
 				<nav class="hidden md:flex gap-8">
-					<a href="#" class="text-sm font-semibold text-slate-600 hover:text-vitalia-cyan transition-colors">Habilidades</a>
-					<a href="#" class="text-sm font-semibold text-slate-600 hover:text-vitalia-cyan transition-colors">Beneficios</a>
+					<a href="#how-it-works" class="text-sm font-semibold text-vitalia-navy hover:text-vitalia-cyan transition-colors">¿Cómo trabajo?</a>
+					<a href="#about" class="text-sm font-semibold text-vitalia-navy hover:text-vitalia-cyan transition-colors">Sobre Mí</a>
+					<a href="#integrations" class="text-sm font-semibold text-vitalia-navy hover:text-vitalia-cyan transition-colors">Integraciones</a>
 				</nav>
-				<a href="#waitlist" class="px-5 py-2.5 text-sm font-bold text-white bg-vitalia-cyan hover:bg-vitalia-navy transition-all rounded-full flex items-center gap-2 group">
-					Pre-inscribirme
+				<a href="#waitlist" class="px-6 py-2.5 text-sm font-bold text-white bg-vitalia-cyan hover:bg-vitalia-navy transition-all rounded-full flex items-center gap-2 shadow-[0_4px_12px_rgba(1,178,248,0.3)] group">
+					Probar Vitalia
 					<svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
 				</a>
 			</div>
 		</header>
 
-		<main class="pt-32 pb-20 px-6 max-w-6xl mx-auto space-y-6">
+		<main class="pt-32 pb-20 px-6 max-w-6xl mx-auto space-y-8">
 			
 			<!-- Top Section: Image & Intro -->
-			<section class="grid md:grid-cols-2 gap-6">
-				<!-- Left: Avatar Image (Bento Box) -->
-				<div class="bg-vitalia-cyan/10 rounded-[2.5rem] overflow-hidden relative aspect-square md:aspect-auto md:h-full">
+			<section class="grid md:grid-cols-2 gap-8">
+				<!-- Left: Avatar Image -->
+				<div class="bg-vitalia-cyan/10 rounded-[2.5rem] overflow-hidden relative aspect-square md:aspect-auto md:h-full border border-vitalia-cyan/20">
 					<!-- Badges -->
 					<div class="absolute top-6 left-6 z-10 flex flex-col gap-2">
-						<span class="px-4 py-1.5 bg-white/30 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/40 flex items-center gap-2">
-							<span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+						<span class="px-4 py-1.5 bg-white/80 backdrop-blur-md text-vitalia-navy text-xs font-bold rounded-full border border-white flex items-center gap-2 shadow-sm">
+							<span class="w-2 h-2 rounded-full bg-vitalia-cyan animate-pulse"></span>
 							Setter de Ventas
 						</span>
-						<span class="px-4 py-1.5 bg-vitalia-navy/40 backdrop-blur-md text-white text-xs font-bold rounded-full border border-white/20 w-fit">
-							Concierge Clínico
+						<span class="px-4 py-1.5 bg-vitalia-navy/80 backdrop-blur-md text-white text-xs font-bold rounded-full border border-vitalia-navy w-fit shadow-sm">
+							SDR
 						</span>
 					</div>
 					<img src="/images/hero-ai-light.png" alt="Vitalia AI" class="w-full h-full object-cover" />
 				</div>
 
-				<!-- Right: Intro text (Bento Box) -->
-				<div class="bg-[#f8f9fa] rounded-[2.5rem] p-10 md:p-14 flex flex-col justify-center">
-					<h1 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] mb-6 text-slate-900">
+				<!-- Right: Intro text -->
+				<div class="bg-vitalia-cyan/5 border border-vitalia-cyan/10 rounded-[2.5rem] p-10 md:p-14 flex flex-col justify-center">
+					<h1 class="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] mb-6 text-vitalia-navy">
 						Hola, soy Vitalia, tu <br/>
-						<span class="text-vitalia-cyan font-bold">Agente Comercial 24/7</span>
+						<span class="text-vitalia-cyan font-extrabold">Agente Comercial</span>
 					</h1>
-					<p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-md font-light">
-						No soy un simple chatbot. Soy la encargada de convertir a tus leads en pacientes reales. Cotizo en Pesos Chilenos (CLP), escalo casos complejos, y agendo las citas de tu clínica en Tacna sin fricciones.
+					<p class="text-lg text-slate-700 mb-10 leading-relaxed max-w-md font-light">
+						No soy una simple asistente, soy quien convierte tus <i>leads</i> en oportunidades reales. Califico potenciales pacientes de Chile, escalo casos médicos complejos, y aseguro tus reservas.
 					</p>
 					<div>
 						<a href="#waitlist" class="inline-flex items-center gap-3 px-8 py-4 text-lg font-bold text-white bg-vitalia-cyan hover:bg-vitalia-navy transition-all rounded-full shadow-[0_8px_20px_rgba(1,178,248,0.3)] group">
@@ -104,46 +105,45 @@ const schema = {
 			</section>
 
 			<!-- Middle Section: Stats -->
-			<section class="grid md:grid-cols-3 gap-6">
-				<div class="bg-[#f8f9fa] rounded-[2.5rem] p-10 text-center flex flex-col items-center justify-center">
+			<section class="grid md:grid-cols-3 gap-8">
+				<div class="bg-vitalia-purple/5 border border-vitalia-purple/10 rounded-[2.5rem] p-10 text-center flex flex-col items-center justify-center">
 					<div class="flex items-center gap-3 mb-4">
-						<span class="text-5xl font-bold text-vitalia-cyan">0%</span>
+						<span class="text-5xl font-extrabold text-vitalia-cyan">5x</span>
 						<svg class="w-10 h-10 text-vitalia-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
 					</div>
-					<p class="text-lg font-semibold text-slate-800">Pérdidas por No-shows</p>
-					<p class="text-sm text-slate-500 mt-2">Cobra fianzas y anticipos en piloto automático.</p>
+					<p class="text-lg font-bold text-vitalia-navy">Pacientes más calificados</p>
 				</div>
-				<div class="bg-[#f8f9fa] rounded-[2.5rem] p-10 text-center flex flex-col items-center justify-center">
+				<div class="bg-vitalia-cyan/5 border border-vitalia-cyan/10 rounded-[2.5rem] p-10 text-center flex flex-col items-center justify-center">
 					<div class="flex items-center gap-3 mb-4">
-						<span class="text-5xl font-bold text-vitalia-cyan">< 90s</span>
+						<span class="text-5xl font-extrabold text-vitalia-cyan">+50%</span>
+						<svg class="w-10 h-10 text-vitalia-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+					</div>
+					<p class="text-lg font-bold text-vitalia-navy">Conversaciones resueltas</p>
+					<p class="text-sm text-slate-500 mt-2">Con tus pacientes fronterizos.</p>
+				</div>
+				<div class="bg-vitalia-yellow/10 border border-vitalia-yellow/20 rounded-[2.5rem] p-10 text-center flex flex-col items-center justify-center">
+					<div class="flex items-center gap-3 mb-4">
+						<span class="text-5xl font-extrabold text-vitalia-cyan">< 3 min</span>
 						<svg class="w-10 h-10 text-vitalia-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 					</div>
-					<p class="text-lg font-semibold text-slate-800">Para responder a tus leads</p>
-					<p class="text-sm text-slate-500 mt-2">Atención inmediata antes de que crucen la frontera.</p>
-				</div>
-				<div class="bg-[#f8f9fa] rounded-[2.5rem] p-10 text-center flex flex-col items-center justify-center">
-					<div class="flex items-center gap-3 mb-4">
-						<span class="text-5xl font-bold text-vitalia-cyan">+3h</span>
-						<svg class="w-10 h-10 text-vitalia-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.514"></path></svg>
-					</div>
-					<p class="text-lg font-semibold text-slate-800">Libres al día para tu equipo</p>
-					<p class="text-sm text-slate-500 mt-2">Menos tareas de bot, más atención humana cálida.</p>
+					<p class="text-lg font-bold text-vitalia-navy">Para responder mensajes</p>
+					<p class="text-sm text-slate-500 mt-2">Atención inmediata, siempre.</p>
 				</div>
 			</section>
 
-			<!-- Bottom Section: Chat & Integrations -->
-			<section class="grid md:grid-cols-2 gap-6">
+			<!-- Chat & Integrations (Original Bento) -->
+			<section class="grid md:grid-cols-2 gap-8" id="integrations">
 				<!-- Chat Mockup -->
-				<div class="bg-[#f8f9fa] rounded-[2.5rem] p-10 md:p-12 overflow-hidden relative">
-					<h2 class="text-3xl md:text-4xl font-medium mb-4 text-slate-900">
-						Así es como <span class="text-vitalia-cyan font-bold">Vitalia</span> habla con tus pacientes
+				<div class="bg-[#f4f7fb] border border-slate-200 rounded-[2.5rem] p-10 md:p-12 overflow-hidden relative">
+					<h2 class="text-3xl font-medium mb-4 text-vitalia-navy">
+						Así es como <span class="text-vitalia-cyan font-bold">Vitalia</span> habla con todos tus pacientes
 					</h2>
-					<p class="text-slate-600 mb-8 max-w-sm">
-						Mira cómo entiende el contexto, responde dudas de frontera, cotiza en Pesos Chilenos y agenda en tiempo real, creando experiencias empáticas.
+					<p class="text-slate-600 mb-8 max-w-sm text-sm">
+						Mira cómo entiende el contexto, responde y agenda en tiempo real, creando experiencias tan humanas como efectivas.
 					</p>
 					
 					<!-- Simulated WhatsApp Chat UI -->
-					<div class="relative w-full max-w-sm mx-auto bg-[#efeae2] rounded-3xl p-4 shadow-xl border border-slate-200 h-[400px] overflow-hidden flex flex-col">
+					<div class="relative w-full max-w-sm mx-auto bg-[#efeae2] rounded-3xl p-4 shadow-xl border border-slate-200 h-[350px] overflow-hidden flex flex-col">
 						<!-- Chat Header -->
 						<div class="bg-white px-4 py-3 rounded-2xl flex items-center gap-3 mb-4 shadow-sm">
 							<div class="w-10 h-10 rounded-full bg-vitalia-cyan overflow-hidden">
@@ -156,69 +156,188 @@ const schema = {
 						</div>
 						<!-- Messages -->
 						<div class="flex-1 space-y-4 relative z-10">
-							<div class="bg-white p-3 rounded-2xl rounded-tl-sm w-[85%] shadow-sm text-sm text-slate-700">
+							<div class="bg-white p-3 rounded-2xl rounded-tl-sm w-[85%] shadow-sm text-xs text-slate-700">
 								Hola! Vengo desde Arica este fin de semana, necesito cotizar un implante dental. ¿Aceptan pesos chilenos?
 							</div>
-							<div class="bg-[#d9fdd3] p-3 rounded-2xl rounded-tr-sm w-[85%] shadow-sm text-sm text-slate-700 self-end ml-auto">
-								¡Hola! Claro que sí. El implante base está en $500 USD, que al cambio de hoy en Tacna son aprox. $485,000 CLP. ¡Te ahorras casi un 40% frente a clínicas en Chile! ¿Te gustaría que revise los horarios disponibles para este sábado?
-							</div>
-							<div class="bg-white p-3 rounded-2xl rounded-tl-sm w-[75%] shadow-sm text-sm text-slate-700">
-								Genial, me sirve el sábado en la mañana. ¿A qué hora hay menos tráfico en la frontera?
+							<div class="bg-[#d9fdd3] p-3 rounded-2xl rounded-tr-sm w-[85%] shadow-sm text-xs text-slate-700 self-end ml-auto">
+								¡Hola! Claro que sí. El implante base está en $500 USD, que en Tacna hoy son aprox. $485,000 CLP. ¿Te busco horarios para el sábado?
 							</div>
 						</div>
-						<!-- Input -->
-						<div class="mt-4 bg-white rounded-full px-4 py-3 text-slate-400 text-sm shadow-sm flex items-center justify-between relative z-10">
-							Escribe un mensaje...
-							<svg class="w-5 h-5 text-vitalia-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-						</div>
-
-						<!-- Avatar Overlay (Like Darwin Alba) -->
-						<div class="absolute -bottom-10 -right-10 w-64 h-64 opacity-90 pointer-events-none">
+						
+						<!-- Avatar Overlay -->
+						<div class="absolute -bottom-5 -right-5 w-48 h-48 opacity-90 pointer-events-none">
 							<img src="/images/hero-ai-light.png" alt="Vitalia Background" class="w-full h-full object-cover rounded-full mix-blend-multiply" />
 						</div>
 					</div>
 				</div>
 
-				<!-- Integrations & Waitlist -->
-				<div class="bg-[#f8f9fa] rounded-[2.5rem] p-10 md:p-12 flex flex-col justify-between" id="waitlist">
+				<!-- Integrations -->
+				<div class="bg-vitalia-purple/5 border border-vitalia-purple/10 rounded-[2.5rem] p-10 md:p-12 flex flex-col justify-between">
 					<div>
-						<h2 class="text-3xl md:text-4xl font-medium mb-4 text-slate-900">
-							<span class="text-vitalia-cyan font-bold">Integración</span> nativa con tus canales de venta
+						<h2 class="text-3xl font-medium mb-4 text-vitalia-navy">
+							<span class="text-vitalia-cyan font-bold">Integración</span> con todos tus canales de comunicación
 						</h2>
-						<p class="text-slate-600 mb-10">
-							Vitalia vive donde están tus pacientes. Se conecta a WhatsApp, Instagram, y sincroniza automáticamente con tu Google Calendar o software médico.
-						</p>
 					</div>
 
-					<!-- App Icons Grid (Simulated) -->
-					<div class="bg-white/50 backdrop-blur-sm border border-slate-200 rounded-3xl p-6 flex flex-wrap gap-4 justify-center items-center mb-10 shadow-sm">
-						<div class="w-14 h-14 bg-[#25D366] rounded-2xl shadow-md flex items-center justify-center text-white text-3xl">💬</div>
-						<div class="w-14 h-14 bg-gradient-to-tr from-[#f09433] to-[#bc1888] rounded-2xl shadow-md flex items-center justify-center text-white text-3xl">📷</div>
-						<div class="w-14 h-14 bg-[#0084FF] rounded-2xl shadow-md flex items-center justify-center text-white text-3xl">⚡</div>
-						<div class="w-14 h-14 bg-white rounded-2xl shadow-md flex items-center justify-center border border-slate-100 p-2">
-							<svg viewBox="0 0 48 48" class="w-full h-full"><path fill="#4285F4" d="M34 6H14c-4.4 0-8 3.6-8 8v20c0 4.4 3.6 8 8 8h20c4.4 0 8-3.6 8-8V14c0-4.4-3.6-8-8-8zm-4 24H18v-2h12v2zm0-4H18v-2h12v2zm0-4H18v-2h12v2z"/></svg>
+					<!-- Dashboard Mockup bg -->
+					<div class="relative bg-white rounded-xl shadow-sm border border-slate-200 h-48 mb-6 overflow-hidden">
+						<img src="/images/ai-concierge-light.png" class="w-full h-full object-cover opacity-20" alt="Dashboard" />
+						
+						<!-- Floating App Icons Glassmorphism -->
+						<div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/40 backdrop-blur-md border border-white/60 rounded-2xl p-4 flex flex-wrap gap-3 justify-center w-11/12 shadow-lg">
+							<div class="w-10 h-10 bg-[#25D366] rounded-xl shadow-md flex items-center justify-center text-white text-xl">💬</div>
+							<div class="w-10 h-10 bg-gradient-to-tr from-[#f09433] to-[#bc1888] rounded-xl shadow-md flex items-center justify-center text-white text-xl">📷</div>
+							<div class="w-10 h-10 bg-[#0084FF] rounded-xl shadow-md flex items-center justify-center text-white text-xl">⚡</div>
+							<div class="w-10 h-10 bg-[#FF5A5F] rounded-xl shadow-md flex items-center justify-center text-white font-bold">A</div>
+							<div class="w-10 h-10 bg-vitalia-cyan rounded-xl shadow-md flex items-center justify-center text-white font-bold text-xl">+</div>
 						</div>
-						<div class="w-14 h-14 bg-vitalia-cyan rounded-2xl shadow-md flex items-center justify-center text-white font-bold text-2xl">+</div>
 					</div>
 
-					<!-- Waitlist Form CTA -->
-					<div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-lg">
-						<h3 class="text-xl font-bold mb-4 text-vitalia-navy">Asegura tu cupo en la Beta Privada</h3>
-						<form class="flex flex-col gap-3">
-							<input type="email" placeholder="Correo electrónico de tu clínica" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-vitalia-cyan focus:ring-1 focus:ring-vitalia-cyan" required>
-							<button type="submit" class="w-full flex items-center justify-center gap-2 py-3 text-center font-bold text-white bg-vitalia-cyan hover:bg-vitalia-navy transition-all rounded-xl">
-								Unirme a la Waitlist
-								<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-							</button>
-						</form>
+					<a href="#waitlist" class="inline-flex w-fit items-center gap-3 px-6 py-3 text-sm font-bold text-white bg-vitalia-cyan hover:bg-vitalia-navy transition-all rounded-full shadow-[0_4px_10px_rgba(1,178,248,0.3)] group">
+						Integrarme ahora
+						<div class="w-6 h-6 rounded-full bg-white text-vitalia-cyan flex items-center justify-center group-hover:translate-x-1 transition-transform">
+							<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<!-- New Section: How do I work? -->
+			<section class="py-12" id="how-it-works">
+				<div class="mb-10">
+					<div class="inline-block px-4 py-1.5 bg-vitalia-cyan text-white text-xs font-bold rounded-full mb-4">Características</div>
+					<h2 class="text-3xl md:text-4xl font-medium text-vitalia-navy">¿Cómo trabajo?</h2>
+					<p class="text-slate-600 mt-4 max-w-2xl">Trabajo en tu clínica de forma remota 24/7. Hago las mismas tareas repetitivas que consumen el tiempo de tu equipo, pero con velocidad inmediata.</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-6">
+					<!-- Card 1 -->
+					<div class="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+						<div class="w-12 h-12 rounded-xl bg-vitalia-cyan/10 flex items-center justify-center text-vitalia-cyan mb-6">
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+						</div>
+						<h3 class="text-xl font-bold text-vitalia-navy mb-3">Califico tus leads</h3>
+						<p class="text-slate-600 text-sm">Identifico al paciente ideal y solicito información médica previa (fotos, radiografías) antes de pasarlo a tu equipo médico. Filtro a los turistas curiosos de los pacientes reales.</p>
+					</div>
+					<!-- Card 2 -->
+					<div class="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+						<div class="w-12 h-12 rounded-xl bg-vitalia-purple/10 flex items-center justify-center text-vitalia-purple mb-6">
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+						</div>
+						<h3 class="text-xl font-bold text-vitalia-navy mb-3">Cotizo transfronterizo</h3>
+						<p class="text-slate-600 text-sm">Respondo preguntas sobre precios haciendo la conversión a Pesos Chilenos (CLP) o Dólares, mostrando el ahorro que tienen al atenderse en Tacna.</p>
+					</div>
+					<!-- Card 3 -->
+					<div class="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+						<div class="w-12 h-12 rounded-xl bg-vitalia-yellow/20 flex items-center justify-center text-yellow-600 mb-6">
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+						</div>
+						<h3 class="text-xl font-bold text-vitalia-navy mb-3">Gestiono tu agenda</h3>
+						<p class="text-slate-600 text-sm">Sincronizo las citas directamente en tu Google Calendar o CRM de clínica. Si alguien cancela, reasigno el espacio automáticamente.</p>
+					</div>
+					<!-- Card 4 -->
+					<div class="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+						<div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center text-green-500 mb-6">
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+						</div>
+						<h3 class="text-xl font-bold text-vitalia-navy mb-3">Cobro fianzas y anticipos</h3>
+						<p class="text-slate-600 text-sm">Para reducir los "no-shows", envío links de pago seguros para cobrar reservas antes del viaje, asegurando el compromiso del paciente.</p>
 					</div>
 				</div>
 			</section>
 
+			<!-- New Section: Something about me -->
+			<section class="grid md:grid-cols-2 gap-8 items-center bg-white rounded-[3rem] overflow-hidden border border-slate-100 shadow-sm" id="about">
+				<div class="h-[500px] w-full">
+					<img src="/images/hero-ai-light.png" alt="Vitalia trabajando" class="w-full h-full object-cover object-top" />
+				</div>
+				<div class="p-10 md:p-16">
+					<h2 class="text-3xl md:text-4xl font-medium text-vitalia-navy mb-6">Un poco sobre mí</h2>
+					<p class="text-slate-600 text-lg leading-relaxed mb-6 font-light">
+						Me apasiona crear grandes experiencias para tus pacientes. Como Inteligencia Artificial, no me frustro si me preguntan 10 veces lo mismo sobre cómo cruzar la frontera Chacalluta-Santa Rosa, ni me demoro 3 horas en responder un WhatsApp.
+					</p>
+					<p class="text-slate-600 text-lg leading-relaxed mb-8 font-light">
+						Mi misión es quitarle el peso administrativo a tu equipo médico para que ellos se dediquen a lo que mejor saben hacer: <b>cuidar la salud de las personas</b> con calidez humana.
+					</p>
+					<a href="#waitlist" class="inline-flex items-center gap-3 px-6 py-3 text-sm font-bold text-vitalia-cyan border border-vitalia-cyan hover:bg-vitalia-cyan hover:text-white transition-all rounded-full group">
+						Habla conmigo
+						<div class="w-6 h-6 rounded-full bg-vitalia-cyan text-white flex items-center justify-center group-hover:bg-white group-hover:text-vitalia-cyan transition-colors">
+							<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<!-- New Section: Banner CTA -->
+			<section class="bg-vitalia-navy rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden" id="waitlist">
+				<!-- Ambient Glows -->
+				<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-vitalia-cyan/20 to-vitalia-purple/20 pointer-events-none"></div>
+				
+				<div class="relative z-10 max-w-3xl mx-auto">
+					<div class="inline-block px-4 py-1.5 bg-vitalia-yellow text-vitalia-navy text-xs font-bold rounded-full mb-6 uppercase tracking-widest">
+						Early Adopters
+					</div>
+					<h2 class="text-4xl md:text-5xl font-medium text-white mb-6">
+						Déjame <span class="text-vitalia-cyan font-bold">Optimizar tu tiempo</span> y tus recursos
+					</h2>
+					<p class="text-slate-300 text-lg mb-10 max-w-xl mx-auto font-light">
+						Conmigo en tu equipo, puedes enfocarte en lo que realmente importa: escalar tu clínica y brindar medicina de excelencia. Únete a la Waitlist privada hoy.
+					</p>
+					
+					<form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+						<input type="email" placeholder="Correo de tu clínica" class="flex-1 bg-white/10 border border-white/20 rounded-full px-6 py-4 text-white placeholder-slate-400 focus:outline-none focus:border-vitalia-cyan focus:ring-1 focus:ring-vitalia-cyan transition-all" required>
+						<button type="submit" class="px-8 py-4 text-center text-vitalia-navy font-bold bg-vitalia-cyan hover:bg-white transition-all rounded-full shadow-[0_0_20px_rgba(1,178,248,0.4)]">
+							Contratar a Vitalia
+						</button>
+					</form>
+				</div>
+			</section>
 		</main>
 
-		<footer class="py-10 text-center text-slate-400 text-sm">
-			<p>© {new Date().getFullYear()} Vitalia SaaS. Hecho con ❤️ en Tacna, Perú.</p>
+		<!-- Extended Footer -->
+		<footer class="bg-[#f8f9fa] border-t border-slate-200 pt-16 pb-8">
+			<div class="max-w-6xl mx-auto px-6">
+				<div class="grid md:grid-cols-4 gap-8 mb-12">
+					<div class="col-span-1 md:col-span-1">
+						<img src="/images/vitalia-logo.png" alt="Vitalia Logo" class="h-10 mb-6" />
+						<p class="text-slate-500 text-sm">Tu agente comercial 24/7. Transformando el turismo médico desde Tacna hacia el mundo.</p>
+					</div>
+					<div>
+						<h4 class="font-bold text-vitalia-navy mb-4">Producto</h4>
+						<ul class="space-y-2 text-sm text-slate-500">
+							<li><a href="#" class="hover:text-vitalia-cyan">Habilidades</a></li>
+							<li><a href="#" class="hover:text-vitalia-cyan">Integraciones</a></li>
+							<li><a href="#" class="hover:text-vitalia-cyan">Casos de Uso</a></li>
+							<li><a href="#" class="hover:text-vitalia-cyan">Precios (Pronto)</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4 class="font-bold text-vitalia-navy mb-4">Compañía</h4>
+						<ul class="space-y-2 text-sm text-slate-500">
+							<li><a href="#" class="hover:text-vitalia-cyan">Sobre Nosotros</a></li>
+							<li><a href="#" class="hover:text-vitalia-cyan">Contacto</a></li>
+							<li><a href="#" class="hover:text-vitalia-cyan">Waitlist</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4 class="font-bold text-vitalia-navy mb-4">Legal</h4>
+						<ul class="space-y-2 text-sm text-slate-500">
+							<li><a href="#" class="hover:text-vitalia-cyan">Privacidad</a></li>
+							<li><a href="#" class="hover:text-vitalia-cyan">Términos de Servicio</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+					<div class="flex gap-4 text-slate-400">
+						<!-- Social Icons placeholders -->
+						<a href="#" class="hover:text-vitalia-cyan"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+						<a href="#" class="hover:text-vitalia-cyan"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+						<a href="#" class="hover:text-vitalia-cyan"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+					</div>
+					<p class="text-sm">Copyright © {new Date().getFullYear()} Vitalia SaaS</p>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>
