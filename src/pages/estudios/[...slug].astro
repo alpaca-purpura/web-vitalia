@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 
 export async function getStaticPaths() {
-	const studies = await getCollection('studies');
+	const studies = await getCollection('estudios');
 	return studies.map((study) => ({
 		params: { slug: study.slug },
 		props: study,
