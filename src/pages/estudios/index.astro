@@ -1,0 +1,47 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import { getCollection } from 'astro:content';
+
+const studies = await getCollection('studies');
+---
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<BaseHead title="Casos de Estudio | Vitalia SaaS" description="Casos de estudio y resultados probados de nuestros clientes." />
+		<style>
+			body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; }
+			header { padding: 2rem; border-bottom: 1px solid #1e293b; text-align: center; }
+			main { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
+			.nav-links a { color: #cbd5e1; text-decoration: none; margin: 0 1rem; }
+			ul { list-style: none; padding: 0; }
+			li { margin-bottom: 2rem; padding: 2rem; background-color: #1e293b; border-radius: 12px; }
+			li a { color: #38bdf8; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+			li p { color: #94a3b8; margin-top: 0.5rem; }
+			.client { font-size: 0.875rem; color: #818cf8; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="nav-links">
+				<a href="/">Home</a>
+				<a href="/articulos">Artículos</a>
+				<a href="/estudios">Estudios</a>
+			</nav>
+		</header>
+		<main>
+			<h1>Casos de Estudio</h1>
+			<ul>
+				{
+					studies.map((study) => (
+						<li>
+							{study.data.client && <span class="client">Cliente: {study.data.client}</span>}
+							<a href={`/estudios/${study.slug}/`}>{study.data.title}</a>
+							<p>{study.data.description}</p>
+						</li>
+					))
+				}
+			</ul>
+		</main>
+	</body>
+</html>

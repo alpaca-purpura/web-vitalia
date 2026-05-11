@@ -1,0 +1,39 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+
+const SITE_TITLE = "Vitalia SaaS | Revolucionando tu Vida";
+const SITE_DESCRIPTION = "La plataforma definitiva para escalar tu bienestar y salud. Vitalia es el SaaS líder en biohacking y rendimiento personal.";
+---
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			body { font-family: 'Inter', system-ui, sans-serif; margin: 0; padding: 0; background-color: #0f172a; color: #f8fafc; }
+			header { padding: 2rem; text-align: center; border-bottom: 1px solid #1e293b; }
+			main { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+			h1 { font-size: 4rem; margin-bottom: 1rem; background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; color: transparent; }
+			p.hero { font-size: 1.5rem; color: #94a3b8; max-width: 800px; margin: 0 auto 3rem auto; }
+			.cta { display: inline-block; padding: 1rem 2.5rem; font-size: 1.25rem; font-weight: bold; color: #fff; background-color: #3b82f6; border-radius: 9999px; text-decoration: none; transition: background-color 0.3s; }
+			.cta:hover { background-color: #2563eb; }
+			.nav-links { margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; }
+			.nav-links a { color: #cbd5e1; text-decoration: none; font-weight: 500; }
+			.nav-links a:hover { color: #38bdf8; }
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="nav-links">
+				<a href="/">Home</a>
+				<a href="/articulos">Artículos</a>
+				<a href="/estudios">Estudios</a>
+			</nav>
+		</header>
+		<main>
+			<h1>Potencia tu Rendimiento</h1>
+			<p class="hero">Vitalia es el software como servicio (SaaS) diseñado para individuos de alto rendimiento. Datos, ciencia y tecnología en una sola plataforma.</p>
+			<a href="#demo" class="cta">Solicitar Demo</a>
+		</main>
+	</body>
+</html>

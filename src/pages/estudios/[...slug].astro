@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+
+export async function getStaticPaths() {
+	const studies = await getCollection('studies');
+	return studies.map((study) => ({
+		params: { slug: study.slug },
+		props: study,
+	}));
+}
+
+const study = Astro.props;
+const { Content } = await study.render();
+---
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<BaseHead title={`${study.data.title} | Casos de Estudio Vitalia`} description={study.data.description} type="article" />
+		<style>
+			body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; }
+			header { padding: 2rem; border-bottom: 1px solid #1e293b; text-align: center; }
+			main { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; line-height: 1.6; }
+			.nav-links a { color: #cbd5e1; text-decoration: none; margin: 0 1rem; }
+			h1 { font-size: 3rem; color: #38bdf8; margin-bottom: 0.5rem; }
+			.meta { color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #1e293b; }
+			.client { color: #818cf8; font-weight: bold; }
+			.content h2 { color: #818cf8; margin-top: 2rem; }
+			.results { background-color: #1e293b; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; border-left: 4px solid #38bdf8; }
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="nav-links">
+				<a href="/">Home</a>
+				<a href="/articulos">Artículos</a>
+				<a href="/estudios">Estudios</a>
+			</nav>
+		</header>
+		<main>
+			<article>
+				<h1>{study.data.title}</h1>
+				<div class="meta">
+					{study.data.client && <div>Cliente: <span class="client">{study.data.client}</span></div>}
+					<div>Publicado: {study.data.pubDate.toLocaleDateString('es-ES')}</div>
+				</div>
+				<div class="content">
+					<Content />
+				</div>
+				{study.data.results && (
+					<div class="results">
+						<strong>Resultados Clave:</strong>
+						<p>{study.data.results}</p>
+					</div>
+				)}
+			</article>
+		</main>
+	</body>
+</html>

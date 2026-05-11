@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+
+export async function getStaticPaths() {
+	const articles = await getCollection('articles');
+	return articles.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<BaseHead title={`${post.data.title} | Vitalia`} description={post.data.description} type="article" />
+		<style>
+			body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; }
+			header { padding: 2rem; border-bottom: 1px solid #1e293b; text-align: center; }
+			main { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; line-height: 1.6; }
+			.nav-links a { color: #cbd5e1; text-decoration: none; margin: 0 1rem; }
+			h1 { font-size: 3rem; color: #38bdf8; }
+			.date { color: #94a3b8; font-size: 0.9rem; }
+			.content { margin-top: 2rem; }
+			.content h2 { color: #818cf8; }
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="nav-links">
+				<a href="/">Home</a>
+				<a href="/articulos">Artículos</a>
+				<a href="/estudios">Estudios</a>
+			</nav>
+		</header>
+		<main>
+			<article>
+				<h1>{post.data.title}</h1>
+				<div class="date">{post.data.pubDate.toLocaleDateString('es-ES')}</div>
+				<div class="content">
+					<Content />
+				</div>
+			</article>
+		</main>
+	</body>
+</html>
