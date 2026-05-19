@@ -1,0 +1,29 @@
+{
+  "team": [
+    {
+      "name": "Valeria",
+      "role": "Tu asesora y guía. Líder de equipo",
+      "video": "/videos/Valeria-web-2.mp4"
+    },
+    {
+      "name": "Adrian",
+      "role": "Vendedor Especialista en Salud",
+      "video": "/videos/Adrian-Web-Cuadrado.mp4"
+    },
+    {
+      "name": "Lucas",
+      "role": "Estratega de Health Marketing",
+      "video": "/videos/Lucas-Web-Cuadrado.mp4"
+    },
+    {
+      "name": "Camila",
+      "role": "Diseñadora IA",
+      "video": "/videos/Camila-Web-Cuadrado.mp4"
+    },
+    {
+      "name": "Mateo",
+      "role": "Desarrollador Web",
+      "video": "/videos/Mateo-Web-Cuadrado.mp4"
+    }
+  ]
+}
